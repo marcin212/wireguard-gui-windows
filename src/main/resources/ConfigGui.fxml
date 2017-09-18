@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="352.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bymarcin.wireguardgui.controller.PeerConfigurationController">
+   <children>
+      <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="331.0" layoutY="308.0" onAction="#cancel" prefHeight="32.0" prefWidth="54.0" ripplerFill="RED" style="-fx-background-color: white;" text="Cancel" textAlignment="CENTER" />
+      <JFXButton buttonType="RAISED" layoutX="261.0" layoutY="308.0" onAction="#save" prefHeight="32.0" prefWidth="51.0" ripplerFill="#00ff10" style="-fx-background-color: white;" text="Save" />
+      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="283.0" prefWidth="372.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="87.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="285.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Public key" />
+            <Label text="Preshared Key" GridPane.rowIndex="1" />
+            <Label text="Endpoint" GridPane.rowIndex="2" />
+            <Label text="Allowed IP" GridPane.rowIndex="3" />
+            <JFXTextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXCheckBox fx:id="replaceAllowedIP" selected="true" text="Replace Allowed IPs" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXSlider fx:id="persistentKeepaliveInterval" blockIncrement="1.0" value="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXSlider>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Persistent Keepalive Interval" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <JFXTextField fx:id="publicKey" GridPane.columnIndex="1" />
+            <JFXTextField fx:id="presharedKey" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="endpoint" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="allowedIP" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</Pane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bymarcin.wireguardgui.controller.WireguardController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Your Public Key" />
+      <Label layoutX="15.0" layoutY="53.0" text="Listen Port" />
+      <JFXTextField fx:id="listenPort" layoutX="119.0" layoutY="49.0" text="51820" />
+      <Label layoutX="12.0" layoutY="155.0" text="Peers:" />
+      <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="342.0" onAction="#addPeer" style="-fx-background-color: white;" text="Add peer" />
+      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="342.0" onAction="#removePeer" style="-fx-background-color: white;" text="Remove peer" />
+      <JFXButton buttonType="RAISED" layoutX="551.0" layoutY="342.0" onAction="#Cancel" style="-fx-background-color: white;" text="Cancel" />
+      <JFXButton buttonType="RAISED" layoutX="491.0" layoutY="342.0" onAction="#Ok" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: white;" text="Ok" />
+      <JFXListView fx:id="peerList" layoutX="12.0" layoutY="180.0" onMouseClicked="#edit" prefHeight="146.0" prefWidth="597.0" />
+      <Label layoutX="8.0" layoutY="93.0" text="Network Interface" />
+      <JFXComboBox fx:id="networkInterface" layoutX="119.0" layoutY="89.0" prefHeight="25.0" prefWidth="135.0" />
+      <JFXTextArea fx:id="publicKey" editable="false" layoutX="119.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefRowCount="1" prefWidth="487.0" />
+      <JFXTextField fx:id="ip" layoutX="467.0" layoutY="58.0" />
+      <Label layoutX="419.0" layoutY="62.0" text="Your IP" />
+      <JFXButton buttonType="RAISED" layoutX="468.0" layoutY="98.0" onAction="#setIP" prefHeight="25.0" prefWidth="135.0" style="-fx-background-color: white;" text="Set IP" />
+      <JFXCheckBox fx:id="replacePeers" layoutX="119.0" layoutY="131.0" text="Replace Peers" />
+   </children>
+</Pane>

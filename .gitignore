@@ -1,0 +1,7 @@
+*.iml
+/build
+/out
+/.gradle
+/.idea
+/installer/files
+/installer/Output
