@@ -6,7 +6,7 @@ Source: "files\tap-windows-9.21.2.exe"; DestDir: "{tmp}"; DestName: "tap-windows
 
 [Icons]
 Name: "{userdesktop}\WireGuardGui"; Filename: "{app}\wireguard-all-0.0.1.jar"; WorkingDir: "{app}"; IconFilename: "{app}\wg4.ico"; IconIndex: 0; Tasks: AddDesktopIcon
-Name: "{userstartup}\Wireguard"; Filename: "{app}\wireguard-all-0.0.1.jar"; WorkingDir: "{app}"; IconFilename: "{app}\wg4.ico"; IconIndex: 0
+Name: "{userstartup}\Wireguard"; Filename: "{app}\wireguard-all-0.0.1.jar"; WorkingDir: "{app}"; IconFilename: "{app}\wg4.ico"; IconIndex: 0; Tasks: Autostart
 
 [Tasks]
 Name: "AddDesktopIcon"; Description: "Add Desktop Icon"
