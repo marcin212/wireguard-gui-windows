@@ -1,7 +1,7 @@
 *.iml
-/build
-/out
-/.gradle
-/.idea
-/installer/files
-/installer/Output
+build/
+out/
+.gradle/
+.idea/
+installer/files/
+installer/Output/
